@@ -34,7 +34,7 @@ while True:
         print(province_key)
     print("".center(30,"-"))
     if province == "无":
-        province = raw_input("\033[0;33m请从以上省份选择或按q退出\033[0;0m").strip()
+        province = input("\033[0;33m请从以上省份选择或按q退出\033[0;0m").strip()
     if city_info.get(province):
         while True:
             print("".center(30, "-"))
@@ -42,11 +42,12 @@ while True:
             for pro_key in city_info[province].keys():
                 print(pro_key)
             if city is "无":
-                city = raw_input("\033[0;33m请继续选择%s的市级或者按q退出当前省份\033[0m"%province).strip()
+                city = input("\033[0;33m请继续选择%s的市级或者按q退出当前省份\033[0m"%province).strip()
             if city_info[province].get(city):
                 for district in city_info[province][city]:
                     print(district)
                 print("\033[0;33m\t{province}的{city}下的县/区已经为您显示完毕\033[0m".format(province = province,city = city))
+                input("按Enter键继续")
                 city = "无"
             elif city == "q":
                 city = "无"
