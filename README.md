@@ -16,8 +16,8 @@
 #### 第二种思路：
 - 从外部传入list和关键字list的范围(min,max)
 - 函数内接受只执行比大小
-- 并返回新的list范围(new_min,new_max)
-- 再次调用二分法函数
+- 并返回list、关键字和新的list范围(new_min,new_max)
+- 再次调用递归二分法函数
 - 这次传入的list和关键字不变，list的范围(new_min,new_max)
 - 重复这些操作
 - 然后将代码优化为递归，递归主要是将接受到的new_min,new_max传入下次函数调用
