@@ -27,6 +27,7 @@ def binary_search(num_list , key):
 			center = int((min+max)/2)
 			if num_list[center] == key:
 				return center
+			elif key < num_list[center]:
 				max = center-1
 			elif key > num_list[center]:
 				min = center+1
